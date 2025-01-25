@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { TypeAnimation } from "react-type-animation";
-import ThreeBackground from "./ThreeBackground";
+import { motion } from "framer-motion"
+import { TypeAnimation } from "react-type-animation"
+import ThreeBackground from "./ThreeBackground"
 
 export default function Introduction() {
   return (
@@ -24,18 +24,14 @@ export default function Introduction() {
           className="mb-8 relative inline-block"
         >
           <img
-            src="images/profile.jpg"
+            src="/placeholder.svg?height=200&width=200"
             alt="Diego Li"
             className="rounded-full w-48 h-48 mx-auto border-4 border-primary"
           />
           <motion.div
             className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary opacity-0"
             animate={{ opacity: [0, 0.5, 0] }}
-            transition={{
-              duration: 3,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-            }}
+            transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
           />
         </motion.div>
         <motion.h1
@@ -53,16 +49,7 @@ export default function Introduction() {
           className="text-xl text-muted-foreground max-w-2xl mx-auto"
         >
           <TypeAnimation
-            sequence={[
-              "I'm a Web Developer",
-              2000,
-              "I'm a FullStack Developer",
-              2000,
-              "I'm a Computer Science Enthusiast",
-              2000,
-              "I'm a Problem Solver",
-              2000,
-            ]}
+            sequence={["I'm a Web Developer", 2000, "I'm a UI/UX Enthusiast", 2000, "I'm a Problem Solver", 2000]}
             wrapper="p"
             cursor={true}
             repeat={Number.POSITIVE_INFINITY}
@@ -70,5 +57,6 @@ export default function Introduction() {
         </motion.div>
       </div>
     </motion.section>
-  );
+  )
 }
+

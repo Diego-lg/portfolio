@@ -1,21 +1,19 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion"
+import { useState } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
-    title: "Tshirt Eccomerce",
-    description:
-      "A T-shirt e-commerce platform powered by generative AI, enabling users to design and customize their own canvas directly on T-shirts. The platform integrates multiple APIs and services to deliver a seamless and innovative experience.",
-    image: "/images/tshirt.png",
+    title: "Project 1",
+    description: "A brief description of Project 1",
+    image: "/placeholder.svg?height=200&width=300",
   },
   {
-    title: "Local AI chatbot with voice assistant in realtime ",
-    description:
-      "A local AI chatbot with a real-time voice assistant, powered by a privacy-focused large language model running locally. It ensures data security while offering optional internet connectivity for retrieving additional information. The chatbot integrates with custom Arduino-based robots, enabling movement and interactive engagement with the environment.",
-    image: "/images/chatbot.png",
+    title: "Project 2",
+    description: "A brief description of Project 2",
+    image: "/placeholder.svg?height=200&width=300",
   },
   {
     title: "Project 3",
@@ -32,20 +30,18 @@ const projects = [
     description: "A brief description of Project 5",
     image: "/placeholder.svg?height=200&width=300",
   },
-];
+]
 
 export default function Projects() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextProject = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  };
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length)
+  }
 
   const prevProject = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
-    );
-  };
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length)
+  }
 
   return (
     <motion.section
@@ -71,12 +67,8 @@ export default function Projects() {
             className="w-full h-64 object-cover"
           />
           <div className="p-6">
-            <h3 className="text-2xl font-semibold mb-2">
-              {projects[currentIndex].title}
-            </h3>
-            <p className="text-muted-foreground">
-              {projects[currentIndex].description}
-            </p>
+            <h3 className="text-2xl font-semibold mb-2">{projects[currentIndex].title}</h3>
+            <p className="text-muted-foreground">{projects[currentIndex].description}</p>
           </div>
         </motion.div>
         <button
@@ -93,5 +85,6 @@ export default function Projects() {
         </button>
       </div>
     </motion.section>
-  );
+  )
 }
+
